@@ -1,0 +1,40 @@
+{% extends "partials/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="row mt-5 pt-3">
+    <div class="col-md-4">
+        <div class="card shadow my-3">
+            <div class="card-body">
+                <h3 class="card-title">ADD Blog</h3>
+                <form method="POST"  enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <input type="submit" value="Add" class="btn btn-primary btn-block">
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col md-8">
+        {% for blog in blogs %}
+        <div class="card shadow my-3">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col md-2">
+                        <img src="{{ blog.image.url }}" alt="img" class="card-img-top">
+                    </div>
+                    <div class="col md-8">
+                        <small>{{ blog.date_created }}</small>
+                        <hr/>
+                        <a href="" class="h3">{{ blog.title }}</a>
+                        <p class="text-justify my-3">
+                            {{ blog.content|slice:":200" }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
