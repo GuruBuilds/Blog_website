@@ -32,16 +32,57 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    # The 'django.contrib.admin' app is added to the list of installed apps.
+    # This app provides the Django administration interface, which allows you to manage your project's data.
     'django.contrib.admin',
+
+    # The 'django.contrib.auth' app is added to the list of installed apps.
+    # This app provides authentication functionality for your Django project.
+    # It includes features such as user registration, login, logout, and password management.
     'django.contrib.auth',
+
+    # The 'django.contrib.contenttypes' app is added to the list of installed apps.
+    # This app provides a framework for content types, allowing you to associate models with permissions and generic relations.
     'django.contrib.contenttypes',
+
+    # The 'django.contrib.sessions' app is added to the list of installed apps.
+    # This app provides session management functionality for your Django project.
+    # It allows you to store and retrieve data associated with a specific user's session.
     'django.contrib.sessions',
+
+    # The 'django.contrib.messages' app is added to the list of installed apps.
+    # This app provides a messaging framework for your Django project.
+    # It allows you to store messages that can be displayed to the user on subsequent requests.
     'django.contrib.messages',
+
+    # The 'django.contrib.staticfiles' app is added to the list of installed apps.
+    # This app provides a way to manage static files (e.g., CSS, JavaScript) in your Django project.
     'django.contrib.staticfiles',
+
+    # The 'blog.apps.BlogConfig' app is added to the list of installed apps.
+    # This app is a custom app defined in the 'blog' directory of your project.
+    # It contains the configuration for the 'blog' app, including its models, views, and templates.
     'blog.apps.BlogConfig',
+
+    # The 'crispy_forms' app is added to the list of installed apps.
+    # This app provides a way to easily render Django forms with Bootstrap styling.
     'crispy_forms',
+
+    # The 'crispy_bootstrap5' app is added to the list of installed apps.
+    # This app is used to enhance the form rendering in Django templates by applying Bootstrap 5 styling.
     'crispy_bootstrap5',
+
+    # The 'django.contrib.humanize' app is added to the list of installed apps.
+    # This app provides a set of template filters that can be used to format data in a human-readable way.
+    # It includes filters for formatting numbers, dates, and times.
+    'django.contrib.humanize',
+
+    # The 'users.apps.UsersConfig' app is added to the list of installed apps.
+    # This app is a custom app defined in the 'users' directory of your project.
+    # It contains the configuration for the 'users' app, including its models, views, and templates.
+    'users.apps.UsersConfig',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
