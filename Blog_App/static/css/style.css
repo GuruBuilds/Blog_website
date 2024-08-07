@@ -1,0 +1,19 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgba(36, 40, 57, 0.5), rgba(62, 28, 56, 0.5)), url('your-image-url');
+ /* Adjust the opacity as needed */
+    z-index: -1;
+}
+
+.center-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: aliceblue;
+}
+

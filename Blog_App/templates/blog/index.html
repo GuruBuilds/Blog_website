@@ -1,6 +1,10 @@
 {% extends "partials/base.html" %}
 {% load crispy_forms_tags %}
 
+{% block title %}
+Blog
+{% endblock %}
+
 {% block content %}
 <div class="row mt-5 pt-3">
     <div class="col-md-4">
@@ -10,7 +14,9 @@
                 <form method="POST"  enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form | crispy }}
-                    <input type="submit" value="Add" class="btn btn-primary btn-block">
+                    <div class="d-grid">
+                        <button class="btn btn-primary" type="submit">Post</button>
+                    </div>
                 </form>
             </div>
         </div>
