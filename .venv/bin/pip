@@ -1,4 +1,4 @@
-#!/home/gurpreet/Django/Blog_website/.venv/bin/python3
+#!/home/gurpreet/Django/Blog_website/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

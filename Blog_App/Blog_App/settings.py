@@ -176,6 +176,6 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Authentication
-# LOGIN_URL = '/accounts/login/'
-# LOGIN_REDIRECT_URL = '/tweet/tweet_list/'
-# LOGOUT_REDIRECT_URL = '/tweet/tweet_list/'
+LOGIN_URL = '/accounts/login/'
+LOGIN_REDIRECT_URL = 'login'
+LOGOUT_REDIRECT_URL = 'logout'
