@@ -80,7 +80,7 @@ INSTALLED_APPS = [
     # The 'users.apps.UsersConfig' app is added to the list of installed apps.
     # This app is a custom app defined in the 'users' directory of your project.
     # It contains the configuration for the 'users' app, including its models, views, and templates.
-    'users.apps.UsersConfig',
+    'users',
 ]
 
 
@@ -177,5 +177,5 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 # Authentication
 LOGIN_URL = '/accounts/login/'
-LOGIN_REDIRECT_URL = 'login'
-LOGOUT_REDIRECT_URL = 'logout'
+LOGIN_REDIRECT_URL = 'index'
+LOGOUT_REDIRECT_URL = 'index'

@@ -24,7 +24,6 @@ def register(request):
         If the request method is POST and the form is valid, an HTTP redirect response to the
         'index' page.
         If the request method is GET, an HTTP response with the user creation form rendered.
-
     """
     if request.method == 'POST':
         form = RegisterForm(request.POST)
@@ -33,4 +32,4 @@ def register(request):
             return redirect('index')
     else:
         form = RegisterForm()
-    return render(request, 'register.html', {'form': form})
+    return render(request, 'registration/register.html', {'form': form})

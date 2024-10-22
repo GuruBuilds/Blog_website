@@ -11,7 +11,10 @@
                     <a class="nav-link active" aria-current="page" href="#">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url "logout" %}">Logout</a>
+                    <form method="post" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="nav-link">logout</button>
+                    </form>
                 </li>
             </ul>
         </div>
